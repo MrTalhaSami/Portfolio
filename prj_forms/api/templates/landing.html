@@ -1,0 +1,296 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+  <section class="container my-5 landing-section">
+    <div class="row reverse">
+      <!-- Text Side -->
+      <div class="col-md-6 mt-4">
+        <h2 class="mb-3 bold">Hi! Its me</h2>
+        <h2 class="mb-3 portfolio-heading">Talha Malik</h2>
+        <h2 class="mb-3 portfolio-role">And I am a <span class="developer-text">Backend Developer</span></h2>
+
+        <p class="portfolio-desc">I'm a Python Developer exploring Django to build modern, user-friendly web applications that combine finctionality with simplicity</p>
+
+        <a href="#" class="btn btn-primary btn-learnmore mt-3 d-block w-25 mb-4">Learn More</a>
+
+        <div class="icons">
+          <i class="bi bi-facebook h2"></i>
+          <i class="bi bi-linkedin h2 mx-4"></i>
+          <i class="bi bi-github h2"></i>
+        </div>
+      </div>
+
+      <!-- Image Side -->
+      <div class="col-md-6 text-center img-glow">
+        <img src="{% static 'api/imgs/pic-1.png' %}" class="img-fluid contrast rounded" alt="Responsive Image" />
+      </div>
+    </div>
+  </section>
+  <br /><br /><br /><br /><br /><br /><br /><br /><br />
+  {% comment %}About Section{% endcomment %}
+  <section id="about" class="fade-up">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Profile Image -->
+        <div class="col-md-4 text-center mb-4 mb-md-0 img-glow">
+          <img src="{% static 'api/imgs/pic-1.png' %}" class="img-fluid shadow contrast" alt="My Photo" style="" />
+        </div>
+
+        <!-- About Content -->
+        <div class="col-md-8">
+          <h2 class="fw-bold mb-3">About Me</h2>
+          <p class="">
+            Hi, I'm <span class="fw-bold">Talha Malik</span>, a passionate
+            <span class="text-scheme fw-bold">Python Django Developer</span> with strong expertise in building scalable and efficient applications using Django and Django REST Framework (DRF). Skilled in designing and developing RESTful APIs, integrating front-end technologies (HTML, CSS, JavaScript), and delivering seamless user experiences.
+
+            Proficient in working with relational databases, including SQL, PostgreSQL, and MySQL, ensuring optimized queries and data integrity. Experienced in version control using Git & GitHub, enabling collaborative and structured development workflows. Well-versed in Agile and Scrum methodologies, contributing to sprint planning, daily stand-ups, and iterative delivery of features. Passionate about writing clean, maintainable code and continuously learning modern development practices to deliver high-quality solutions.
+          </p>
+
+          {% comment %} <!-- Skills Highlight -->
+          <h5 class="fw-bold mt-4">Core Skills:</h5>
+          <div class="mb-3">
+            <span class="badge bg-dark me-1 px-3 py-2 fs-6">Django</span>
+            <span class="badge bg-success me-1 px-3 py-2 fs-6">Django REST Framework</span>
+            <span class="badge bg-primary me-1 px-3 py-2 fs-6">PostgreSQL</span>
+            <span class="badge bg-warning text-dark me-1 px-3 py-2 fs-6">Bootstrap</span>
+            <span class="badge bg-info text-dark me-1 px-3 py-2 fs-6">APIs</span>
+            <span class="badge bg-secondary me-1 px-3 py-2 fs-6">Git/GitHub</span>
+          </div> {% endcomment %}
+
+          <!-- Quick Facts -->
+          <h2>Experties</h2>
+          <ul class="list- mt-3">
+            <li>Built REST APIs with Django & DRF</li>
+            <li>Experience in MySQL & PostgreSQL</li>
+            <li>Integrated Bootstrap for responsive UI</li>
+            <li>Worked with authentication, ORM, and admin customization</li>
+          </ul>
+
+          <!-- Button -->
+          <a href="#projects" class="btn btn-success mt-3">See My Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% comment %}skill sections{% endcomment %}
+
+  <section id="skills" class="py-5 skills mt-6">
+    <div class="container text-center">
+      <h2 class="mb-4 fw-bold fade-up">Core Skills</h2>
+
+      <div class="row justify-content-center">
+        <!-- Skill 1 -->
+        <div class="col-md-2 fade-up">
+          <div class="p-4 shadow rounded d-flex flex-column align-items-center">
+            <img src="{% static 'api/imgs/django.svg' %}" alt="Django" class="img-fluid mb-3 skill-logo" />
+            <h5>Django</h5>
+          </div>
+        </div>
+
+        <!-- Skill 2 -->
+        <div class="col-md-2 fade-up">
+          <div class="p-4 shadow rounded d-flex flex-column align-items-center">
+            <img src="{% static 'api/imgs/python.svg' %}" alt="Python" class="img-fluid mb-3 skill-logo" />
+            <h5>Python</h5>
+          </div>
+        </div>
+
+        <!-- Skill 3 -->
+        <div class="col-md-2 fade-up">
+          <div class="p-4 shadow rounded d-flex flex-column align-items-center">
+            <img src="{% static 'api/imgs/rest.svg' %}" alt="SQL" class="img-fluid mb-3 skill-logo" />
+            <h5>Django REST Framework</h5>
+          </div>
+        </div>
+
+        <!-- Skill 4 -->
+        <div class="col-md-2 fade-up">
+          <div class="p-4 shadow rounded d-flex flex-column align-items-center">
+            <img src="{% static 'api/imgs/postgres.svg' %}" alt="PostgresSQL" class="img-fluid mb-3 skill-logo" />
+            <h5>PostgresSQL</h5>
+          </div>
+        </div>
+
+        <!-- Skill 5 -->
+        <div class="col-md-2 fade-up">
+          <div class="p-4 shadow rounded d-flex flex-column align-items-center">
+            <img src="{% static 'api/imgs/html.svg' %}" alt="PostgresSQL" class="img-fluid mb-3 skill-logo" />
+            <h5>HTML</h5>
+          </div>
+        </div>
+
+        <!-- Skill 6 -->
+        <div class="col-md-2 fade-up">
+          <div class="p-4 shadow rounded d-flex flex-column align-items-center">
+            <img src="{% static 'api/imgs/css.svg' %}" alt="PostgresSQL" class="img-fluid mb-3 skill-logo" />
+            <h5>CSS</h5>
+          </div>
+        </div>
+
+        <!-- Skill 7 -->
+        <div class="col-md-2 fade-up">
+          <div class="p-4 shadow rounded d-flex flex-column align-items-center">
+            <img src="{% static 'api/imgs/js.svg' %}" alt="PostgresSQL" class="img-fluid mb-3 skill-logo" />
+            <h5>JavaSripts</h5>
+          </div>
+        </div>
+
+        <!-- Skill 8 -->
+        <div class="col-md-2 fade-up">
+          <div class="p-4 shadow rounded d-flex flex-column align-items-center">
+            <img src="{% static 'api/imgs/github.svg' %}" alt="PostgresSQL" class="img-fluid mb-3 skill-logo" />
+            <h5>Github</h5>
+          </div>
+        </div>
+        <!-- Skill 9 -->
+        <div class="col-md-2 fade-up">
+          <div class="p-4 shadow rounded d-flex flex-column align-items-center">
+            <img src="{% static 'api/imgs/bootstrap.svg' %}" alt="Bootstrap" class="img-fluid mb-3 skill-logo" />
+            <h5>Bootstrap</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% comment %}resume section{% endcomment %}
+
+  <!-- Resume Section -->
+  <section id="resume" class="py-5 fade-up">
+    <div class="container my-5">
+      <h1 class="text-center mb-5">Resume</h1>
+      <div class="row">
+        <!-- Left Column -->
+        <div class="col-md-4 bg-dark text-white p-4 rounded">
+          <h2 class="mb-3">Talha Malik</h2>
+          <p>Python Django Developer</p>
+          <hr class="border-light" />
+          <p>
+            <strong><i class="bi bi-envelope-fill"></i></strong> mrtalhasami19@gmail.com
+          </p>
+          <p>
+            <strong><i class="bi bi-telephone-fill"></i></strong> +92 331 4883453
+          </p>
+          <p>
+            <strong><i class="bi bi-linkedin"></i></strong> linkedin.com/in/talha-malik-97ba10226/
+          </p>
+          <p>
+            <strong><i class="bi bi-github"></i></strong> linkedin.com/in/talha-malik-97ba10226/
+          </p>
+          <h4 class="mb-3 mt-5">Skills</h4>
+          <p class="mb-1">Python</p>
+          <div class="progress mb-3" style="height: 8px;">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 85%;"></div>
+          </div>
+          <p class="mb-1">Django</p>
+          <div class="progress mb-3" style="height: 8px;">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 80%;"></div>
+          </div>
+
+          <p class="mb-1">Django REST Framework</p>
+          <div class="progress mb-3" style="height: 8px;">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 75%;"></div>
+          </div>
+
+          <p class="mb-1">SQL (MySQL, PostgreSQL)</p>
+          <div class="progress mb-3" style="height: 8px;">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 70%;"></div>
+          </div>
+
+          <p class="mb-1">HTML, CSS, JS</p>
+          <div class="progress mb-3" style="height: 8px;">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 60%;"></div>
+          </div>
+
+          <p class="mb-1">Bootstrap</p>
+          <div class="progress mb-3" style="height: 8px;">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 80%;"></div>
+          </div>
+
+          <h4 class="mb-3 mt-5">Languages</h4>
+          <p class="mb-1">English</p>
+          <div class="progress mb-3" style="height: 8px;">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 80%;"></div>
+          </div>
+          <p class="mb-1">Urdu</p>
+          <div class="progress mb-3" style="height: 8px;">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 80%;"></div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-md-8 resume-col-8">
+          <!-- Row 1 -->
+          <div class="row mb-4">
+            <div class="col">
+              <h3>Key Summary</h3>
+              <p>I am a competent Python and Django developer with hands-on experience in building web applications, REST APIs, and database-driven solutions. Skilled in Python, Django, and Django REST Framework, I have a strong command of SQL with MySQL and PostgreSQL, along with frontend integration using HTML, CSS, Bootstrap, and JavaScript. I am also familiar with version control, API integration, and deployment using Gunicorn and Nginx, making me capable of delivering scalable and maintainable applications.</p>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="row mb-4">
+            <div class="col">
+              <h3>Experience</h3>
+              <p>
+                <li>
+                  <strong>Pakistan Railways</strong> — Assitant Administration
+                </li>
+              </p>
+              <p>Worked on SAP-HRM, data cleaning, data collecion and writing SQL queries for finding missing records.</p>
+              <p>Managing Records</p>
+            </div>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="row">
+            <div class="col">
+              <h3>Education</h3>
+              <ul>
+                <li>
+                  <strong>Bacholers in Business Administration</strong>- University of Education 2021-2025
+                </li>
+                <p>Specialization in Accounts and Finance</p>
+              </ul>
+            </div>
+          </div>
+
+          {% comment %}Row-4{% endcomment %}
+          <div class="row mb-4">
+            <div class="col">
+              <h3>Certifications</h3>
+              <ul class="list-unstyled">
+                <li>
+                  📜 <strong>Google Analytics</strong> – Coursera
+                </li>
+                <li>
+                  📜 <strong>The Complete Python Bootcamp</strong> – Udemy
+                </li>
+                <li>
+                  📜 <strong>MySQL Essential Training</strong> – LinkedIn
+                </li>
+                <li>
+                  📜 <strong>Data Visualization</strong> – LinkedIn
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+{% block footer %}
+  <footer>
+    <p>Copyright @talha</p>
+  </footer>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{% static 'api/js/landing.js' %}"></script>
+  <script src="{% static 'api/js/skills.js' %}"></script>
+  <script src="{% static 'api/js/about.js' %}"></script>
+{% endblock %}

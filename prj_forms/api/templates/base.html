@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      My Portfolio{% block title %}
+
+      {% endblock %}
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'api/base.css' %}" />
+    <link rel="stylesheet" href="{% static 'api/landing.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-offset="70" tabindex="0">
+    {% comment %} <nav class="navbar navbar-expand-lg bg-color sticky-top">
+      <div class="container justify-content-around">
+        <div class="logo">
+          <a class="navbar-brand" href="{% url 'landing' %}">Portfolio</a>
+        </div>
+
+        <div class="navbar-nav">
+          <a class="nav-link" aria-current="page" href="{% url 'landing' %}#about">About</a>
+          <a class="nav-link" aria-current="page" href="{% url 'landing' %}#skills">Skills</a>
+          <a class="nav-link" aria-current="page" href="{% url 'landing' %}#resume">Resume</a>
+          <a class="nav-link" href="{% url 'form' %}">Contact</a>
+          <a class="nav-link" href="{% url 'members' %}">Members</a>
+        </div>
+      </div>
+    </nav> {% endcomment %}
+    
+    <nav class="navbar navbar-expand-lg bg-color sticky-top">
+      <div class="container jusitfy-content-around">
+        <a class="navbar-brand" href="{% url 'landing' %}">Portfolio</a>
+
+        <!-- Toggle button (only visible on mobile/tablet) -->
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"><i class="bi bi-three-dots-vertical"></i></button>
+
+        <!-- Offcanvas Menu -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header bg-color">
+            <h5 class="offcanvas-title bg-color text-scheme" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body bg-color">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item ms-4">
+                <a class="nav-link" aria-current="page" href="{% url 'landing' %}#about">About</a>
+              </li>
+              <li class="nav-item ms-4">
+                <a class="nav-link" href="{% url 'landing' %}#skills">Skills</a>
+              </li>
+              <li class="nav-item ms-4">
+                <a class="nav-link" href="{% url 'form' %}">Contact</a>
+              </li>
+              <li class="nav-item ms-4">
+                <a class="nav-link" href="{% url 'members' %}">Members</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    {% comment %}Carousel Image{% endcomment %}
+
+    {% block body %}
+
+    {% endblock %}
+
+    {% block footer %}{% endblock  %}
+
+    {% block scripts %}
+
+    {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  </body>
+</html>

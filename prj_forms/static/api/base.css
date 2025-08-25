@@ -1,0 +1,236 @@
+.bg-color {
+    background-color: #20242d;
+
+}
+.bg-color-2{
+    background-color: #02eefe;
+}
+
+nav{
+    box-shadow: 15px 5px 20px rgb(45, 45, 45);
+}
+
+.navbar-brand,
+.nav-link {
+    color: white;
+
+}
+.navbar-brand:hover{
+    color: #02eefe;
+}
+
+.nav-link:hover {
+
+    color: #02eefe;
+    transition: 400ms;
+    border-bottom: 1px solid #02eefe;
+}
+.nav-link:focus, .nav-link.active {
+  color: #02eefe !important;   /* Black text */
+  border-bottom: 2px solid #02eefe; /* Add underline effect (optional) */
+  transition: 400ms;
+}
+
+
+body {
+    background-color: #20242d;
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+    
+}
+html, body {
+      height: 100%; /* full height */
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1; /* take up remaining space */
+    }
+
+.container,
+.row,
+.col-md-4,
+.col-md-6,
+.col-md-8{
+    background-color: #20242d;
+    color: white;
+}
+
+
+
+.portfolio-heading {
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.img-fluid{
+   
+    background-color: #20242d;
+
+}
+
+.developer-text{
+    color: #02eefe;
+}
+.portfolio-desc{
+    font-size: 1.2rem
+}
+
+.bi{
+    color: #02eefe;
+}
+
+.btn-learnmore{
+    background-color: #02eefe;
+    font-weight: 700;
+}
+
+.about-section, .landing-section{
+    opacity: 0;
+    transform: translateY(50px); /* start lower */
+    transition: all 0.8s ease-out;
+ 
+}
+
+/* When visible (add this class via JS or scroll trigger) */
+.about-section.show, .landing-section.show {
+  opacity: 1;
+  transform: translateY(0); /* pop upward */
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skills{
+    margin-top: 3rem;
+}
+
+.mt-6{
+    margin-top: 3rem;
+}
+
+.text-scheme{
+    color: #02eefe;
+}
+
+.text-scheme-list{
+    color: #02eefe;
+    background-color: #20242d;
+    border: 1px solid #02eefe;
+}
+
+.text-scheme-list:hover{
+    background-color: #02eefe;
+    color: #20242d;
+    transition: 400ms;
+}
+
+.form-control{
+    
+    border: 1px solid #02eefe;
+}
+
+.form-control::placeholder{
+    color:  #20242d;
+    opacity: 0.3;
+}
+.form-control:focus{
+    
+    box-shadow: none
+}
+
+.input-group{
+    width: 50%;
+
+}
+
+#visible-addon{
+    background-color: #02eefe;
+    
+}
+
+.bi-form{
+    color: #20242d;
+}
+
+.btn-form-submit:hover{
+    background-color: #20242d;
+    color: #02eefe;
+    border: 2px solid #02eefe;
+
+}
+
+/* table details */
+
+/* Custom Theme */
+.bg-scheme {
+  background-color: #20242d !important;
+  color: #02eefe !important;
+  border-color: #02eefe !important;
+}
+
+.text-scheme {
+  color: #02eefe !important;
+}
+
+/* Custom Button */
+.btn-scheme {
+  background-color: #20242d;
+  color: #02eefe;
+  border: 1px solid #02eefe;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-scheme:hover {
+  background-color: #02eefe;
+  color: #20242d;
+  border: 1px solid #02eefe;
+}
+
+/* Table Styling */
+.table th {
+  background-color: #16181e !important;
+  color: #02eefe !important;
+  border: 1px solid #02eefe !important;
+}
+
+.table td {
+  background-color: #16181e !important;
+  color: #02eefe !important;
+  border: 1px solid #02eefe !important;
+}
+
+
+/* Image Wrapper */
+.contrast{
+    filter: contrast(110%);
+}
+.skill-logo{
+    filter: contrast(110%);
+}
+
+@media (max-width: 768px) {
+  .reverse {
+    flex-direction: column-reverse;
+  }
+}
+
+footer{
+    text-align: center;
+    background-color: #16181e;
+}
+html, body {
+      height: 100%; /* full height */
+    }

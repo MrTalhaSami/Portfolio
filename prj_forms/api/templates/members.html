@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <div class="container mt-3" >
+    <h2 class="mb-4 ">Members Created</h2>
+
+    {% for x in data %}
+      <div class="list-group w-25 text-scheme ">
+        <a href="details/{{ x.id }}" class="list-group-item text-scheme-list list-group-item-action mb-2">{{ x.firstName }} {{ x.lastName }}</a>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
+
+{% block footer %}
+  <footer>
+    <p>Copyright @talha</p>
+  </footer>
+{% endblock %}

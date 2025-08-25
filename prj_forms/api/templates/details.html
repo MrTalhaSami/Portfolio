@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container mt-5">
+
+  <h2 class="mb-4 text-center text-scheme">Member Details</h2>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover shadow-sm rounded">
+      <tbody>
+        <tr>
+          <th class="bg-scheme text-white w-25">Name</th>
+          <td>{{ data.firstName }} {{ data.lastName }}</td>
+        </tr>
+        <tr>
+          <th class="bg-scheme text-white">Phone</th>
+          <td>{{ data.number }}</td>
+        </tr>
+        <tr>
+          <th class="bg-scheme text-white">Date</th>
+          <td>{{ data.date }}</td>
+        </tr>
+        <tr>
+          <th class="bg-scheme text-white">Email</th>
+          <td>{{ data.email }}</td>
+        </tr>
+        <tr>
+          <th class="bg-scheme text-white">Message</th>
+          <td>{{ data.message }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="text-center mt-3">
+    <a href="/members" class="btn btn-scheme px-4">← Back to Members</a>
+  </div>
+
+</div>
+
+{% endblock body %}
+
