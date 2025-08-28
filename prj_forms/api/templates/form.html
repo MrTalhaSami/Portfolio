@@ -9,31 +9,31 @@
       {% csrf_token %}
       <div class="input-group mb-3">
         <span class="input-group-text" id="visible-addon"><i class="bi bi-form bi-person-fill"></i></span>
-        <input type="text" class="form-control" name="fName" placeholder="first name" aria-label="Username" aria-describedby="visible-addon" />
+        <input type="text" class="form-control" name="fName" placeholder="first name" aria-label="Username" aria-describedby="visible-addon" required />
         <input type="text" class="form-control d-none" placeholder="Hidden input" aria-label="Hidden input" aria-describedby="visible-addon" />
       </div>
 
       <div class="input-group mb-3">
         <span class="input-group-text" id="visible-addon">@</span>
-        <input type="text" class="form-control" name="lName" placeholder="last name" aria-label="Username" aria-describedby="visible-addon" />
+        <input type="text" class="form-control" name="lName" placeholder="last name" aria-label="Username" aria-describedby="visible-addon" required />
         <input type="text" class="form-control d-none" placeholder="Hidden input" aria-label="Hidden input" aria-describedby="visible-addon" />
       </div>
 
       <div class="input-group mb-3">
         <span class="input-group-text" id="visible-addon"><i class="bi bi-123 bi-form"></i></span>
-        <input type="number" class="form-control" name="num" placeholder="number" aria-label="Username" aria-describedby="visible-addon" />
+        <input type="number" class="form-control" name="num" placeholder="number" aria-label="Username" aria-describedby="visible-addon" pattern="[0-9]{10,}" required />
         <input type="number" class="form-control d-none" placeholder="Hidden input" aria-label="Hidden input" aria-describedby="visible-addon" />
       </div>
 
       <div class="input-group mb-3">
         <span class="input-group-text" id="visible-addon"><i class="bi bi-envelope-fill bi-form"></i></span>
-        <input type="text" class="form-control" name="email" placeholder="email" aria-label="Username" aria-describedby="visible-addon" />
+        <input type="text" class="form-control" name="email" placeholder="email" aria-label="Username" aria-describedby="visible-addon" required/>
         <input type="text" class="form-control d-none" placeholder="Hidden input" aria-label="Hidden input" aria-describedby="visible-addon" />
       </div>
 
       <div class="input-group mb-3">
         <span class="input-group-text" id="visible-addon"><i class="bi bi-chat-dots-fill bi-form"></i></span>
-        <input type="text" class="form-control" name="message" placeholder="Enter your message" aria-label="Username" aria-describedby="visible-addon" />
+        <input type="text" class="form-control" name="message" placeholder="Enter your message" aria-label="Username" aria-describedby="visible-addon" required/>
         <input type="text" class="form-control d-none" placeholder="Hidden input" aria-label="Hidden input" aria-describedby="visible-addon" />
       </div>
 
