@@ -1,6 +1,9 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.template import loader
 from .models import dataClass
+from django.core.exceptions import ValidationError
+import re
+
 
 
 # Create your views here.
@@ -42,6 +45,27 @@ def form(request):
         email = request.POST.get('email')
         msg = request.POST.get('message')
         date = request.POST.get('date')
+        
+        #Validations for forms
+        errors = []
+        
+        #for Number input
+        if not re.fullmatch(r"\d{11}", numb):
+            errors.append("number must be 11 digits")
+        
+        #for email input
+        if not re.fullmatch(r"[^@]+@[^@]+\.[^@]+", email):
+            errors.append("Invalid email format.")
+            
+        #for first and last name
+        if not re.fullmatch(r"[A-Za-z]+", fisrt):
+            errors.append("First name should only contain letters.")
+        if not re.fullmatch(r"[A-Za-z]+", last):
+            errors.append("Last name should only contain letters.")
+            
+        if errors:
+            return render(request, 'form.html', {'errors': errors})
+        
         
         dataClass.objects.create(
             firstName = fisrt,

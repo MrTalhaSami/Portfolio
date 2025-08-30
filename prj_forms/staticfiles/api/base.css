@@ -218,9 +218,18 @@ html, body {
     filter: contrast(110%);
 }
 
+.w-25-contact{
+    width: 25%;
+}
+
 @media (max-width: 768px) {
   .reverse {
     flex-direction: column-reverse;
+  }
+  .w-25-contact{
+    width: 100% !important;
+    margin-left: 20px;
+    margin-right: auto;
   }
 }
 

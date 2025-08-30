@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 
-{% block title %}| Contact {% endblock title %}
+{% block title %}
+  | Contact
+{% endblock %}
 
 {% block body %}
   <div class="container">
     <h1 class="mt-5">Contact Me</h1>
-    <form action="" class="mt-5 " method="post">
+    <form action="" class="mt-5" method="post">
       {% csrf_token %}
       <div class="input-group mb-3">
         <span class="input-group-text" id="visible-addon"><i class="bi bi-form bi-person-fill"></i></span>
@@ -21,31 +23,44 @@
 
       <div class="input-group mb-3">
         <span class="input-group-text" id="visible-addon"><i class="bi bi-123 bi-form"></i></span>
-        <input type="number" class="form-control" name="num" placeholder="number" aria-label="Username" aria-describedby="visible-addon" pattern="[0-9]{10,}" required />
+        <input type="number" class="form-control" name="num" placeholder="number" aria-label="Username" aria-describedby="visible-addon" required />
         <input type="number" class="form-control d-none" placeholder="Hidden input" aria-label="Hidden input" aria-describedby="visible-addon" />
       </div>
 
       <div class="input-group mb-3">
         <span class="input-group-text" id="visible-addon"><i class="bi bi-envelope-fill bi-form"></i></span>
-        <input type="text" class="form-control" name="email" placeholder="email" aria-label="Username" aria-describedby="visible-addon" required/>
+        <input type="text" class="form-control" name="email" placeholder="email" aria-label="Username" aria-describedby="visible-addon" required />
         <input type="text" class="form-control d-none" placeholder="Hidden input" aria-label="Hidden input" aria-describedby="visible-addon" />
       </div>
 
       <div class="input-group mb-3">
         <span class="input-group-text" id="visible-addon"><i class="bi bi-chat-dots-fill bi-form"></i></span>
-        <input type="text" class="form-control" name="message" placeholder="Enter your message" aria-label="Username" aria-describedby="visible-addon" required/>
+        <input type="text" class="form-control" name="message" placeholder="Enter your message" aria-label="Username" aria-describedby="visible-addon" required />
         <input type="text" class="form-control d-none" placeholder="Hidden input" aria-label="Hidden input" aria-describedby="visible-addon" />
       </div>
 
-      <div class="input-group mb-3 ">
+      <div class="input-group mb-3">
         <span class="input-group-text" id="visible-addon">@</span>
         <input type="date" class="form-control" name="date" placeholder="Enter Date" aria-label="Username" aria-describedby="visible-addon" />
         <input type="date" class="form-control d-none" placeholder="Hidden input" aria-label="Hidden input" aria-describedby="visible-addon" />
       </div>
 
       <div class="">
-        <button class="btn btn-form-submit bg-color-2 " type="submit">Send</button>
+        <button class="btn btn-form-submit bg-color-2" type="submit">Send</button>
       </div>
     </form>
+
+    {% if errors %}
+    <ul class="mt-3" style="color: red;">
+        {% for error in errors %}
+            <li>{{ error }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
   </div>
+
+
+
+
 {% endblock %}
