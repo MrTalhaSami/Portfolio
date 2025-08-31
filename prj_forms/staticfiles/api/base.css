@@ -60,6 +60,9 @@ html, body {
     color: white;
 }
 
+.bolder{
+  font-weight: 700;
+}
 
 
 .portfolio-heading {
@@ -229,8 +232,18 @@ html, body {
     width: 100% !important;
     
   }
+  .img-fluid{
+    max-width: 70%;
+  }
   .about-me{
     text-align: center;
+    font-size: 2rem;
+  }
+  .text-center-md{
+    text-align: center !important;
+  }
+  .fw-bold-md{
+    font-weight: bold;
   }
 }
 
@@ -259,4 +272,11 @@ html, body {
 
 .card:hover img {
   transform: scale(1.1); /* Zoom image slightly more */
+}
+
+
+.card{
+  border: 1px solid #02eefe;
+  background-color: #20242d;
+  color: #02eefe;
 }
