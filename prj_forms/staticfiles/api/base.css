@@ -184,15 +184,14 @@ html, body {
 
 /* Custom Button */
 .btn-scheme {
-  background-color: #20242d;
-  color: #02eefe;
-  border: 1px solid #02eefe;
+  background-color: #02eefe;
+  color: #16181e;
   transition: all 0.3s ease-in-out;
 }
 
 .btn-scheme:hover {
-  background-color: #02eefe;
-  color: #20242d;
+  background-color: #16181e;
+  color: #02eefe;
   border: 1px solid #02eefe;
 }
 
@@ -219,7 +218,7 @@ html, body {
 }
 
 .w-25-contact{
-    width: 25%;
+    width: 50%;
 }
 
 @media (max-width: 768px) {
@@ -228,8 +227,10 @@ html, body {
   }
   .w-25-contact{
     width: 100% !important;
-    margin-left: 20px;
-    margin-right: auto;
+    
+  }
+  .about-me{
+    text-align: center;
   }
 }
 
@@ -240,3 +241,22 @@ footer{
 html, body {
       height: 100%; /* full height */
     }
+
+
+.card {
+  overflow: hidden; /* Prevent image from going outside */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Zoom in */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Add shadow */
+}
+
+.card img {
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1); /* Zoom image slightly more */
+}

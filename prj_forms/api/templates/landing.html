@@ -12,7 +12,9 @@
 
         <p class="portfolio-desc">I'm a Python Developer exploring Django to build modern, user-friendly web applications that combine finctionality with simplicity</p>
 
-        <a href="/form" class="btn btn-primary btn-learnmore mt-3 d-block w-25-contact mb-4">Contact Now</a>
+        <div class="text-center">
+          <a href="/form" class="btn btn-primary btn-learnmore mt-3 d-block w-25-contact mb-4">Contact Now</a>
+        </div>
 
         <div class="icons">
           <a href=""><i class="bi bi-facebook h2"></i></a>
@@ -39,7 +41,7 @@
 
         <!-- About Content -->
         <div class="col-md-8">
-          <h2 class="fw-bold mb-3">About Me</h2>
+          <h2 class="fw-bold mb-3 about-me">About Me</h2>
           <p class="">
             Hi, I'm <span class="fw-bold">Talha Malik</span>, a passionate
             <span class="text-scheme fw-bold">Python Django Developer</span> with strong expertise in building scalable and efficient applications using Django and Django REST Framework (DRF). Skilled in designing and developing RESTful APIs, integrating front-end technologies (HTML, CSS, JavaScript), and delivering seamless user experiences.
@@ -80,7 +82,7 @@
     <div class="container text-center">
       <h2 class="mb-4 fw-bold fade-up">Core Skills</h2>
 
-      <div class="row justify-content-center">
+      <div class="row justify-content-center row-cols-2 row-cols-md-5">
         <!-- Skill 1 -->
         <div class="col-md-2 fade-up">
           <div class="p-4 shadow rounded d-flex flex-column align-items-center">
@@ -160,7 +162,7 @@
   <!-- Resume Section -->
   <section id="resume" class="py-5 fade-up">
     <div class="container my-5">
-      <h1 class="text-center mb-5">Resume</h1>
+      <h1 class="text-center mb-5"><strong>Resume</strong></h1>
       <div class="row">
         <!-- Left Column -->
         <div class="col-md-4 bg-dark text-white p-4 rounded">
@@ -177,7 +179,7 @@
             <strong><i class="bi bi-linkedin"></i></strong> linkedin.com/in/talha-malik-97ba10226/
           </p>
           <p>
-            <strong><i class="bi bi-github"></i></strong> linkedin.com/in/talha-malik-97ba10226/
+            <strong><i class="bi bi-github"></i></strong> github.com/MrTalhaSami
           </p>
           <h4 class="mb-3 mt-5">Skills</h4>
           <p class="mb-1">Python</p>
@@ -281,6 +283,54 @@
       </div>
     </div>
   </section>
+
+  {% comment %}project section{% endcomment %}
+
+  {% comment %} <section id="projects" class="py-5 bg-dark text-light fade-up">
+    <div class="container">
+      <h2 class="text-center mb-4">My Projects</h2>
+      <div class="row g-4">
+        <!-- Project Card 1 -->
+        <div class="col-md-6 col-lg-4 project-card">
+          <div class="card h-100 shadow-lg border-0">
+            <img src="static/img/project1.png" class="card-img-top" alt="Project 1" />
+            <div class="card-body">
+              <h5 class="card-title">Blog Application</h5>
+              <p class="card-text">A full-featured blog built with Django where users can sign up, create posts, comment, and manage content using a custom admin dashboard.</p>
+              <a href="https://github.com/yourgithub/blog-app" target="_blank" class="btn btn-scheme">View Code</a>
+              <a href="https://your-live-demo-link.com" target="_blank" class="btn btn-scheme">Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-lg border-0">
+            <img src="static/img/project2.png" class="card-img-top" alt="Project 2" />
+            <div class="card-body">
+              <h5 class="card-title">E-Commerce Store</h5>
+              <p class="card-text">An online store built using Django & Django REST Framework with cart, checkout, payment integration, and user authentication.</p>
+              <a href="https://github.com/yourgithub/ecommerce" target="_blank" class="btn btn-scheme">View Code</a>
+              <a href="https://your-live-demo-link.com" target="_blank" class="btn btn-scheme">Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-lg border-0">
+            <img src="{% static 'api/imgs/blog-app' %}" class="card-img-top" alt="Project 3" />
+            <div class="card-body">
+              <h5 class="card-title">Task Manager API</h5>
+              <p class="card-text">A REST API built with Django REST Framework to manage tasks with CRUD operations, token authentication, and role-based permissions.</p>
+              <a href="https://github.com/yourgithub/task-api" target="_blank" class="btn btn-scheme">View Code</a>
+              <a href="https://your-live-demo-link.com" target="_blank" class="btn btn-scheme">API Docs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> {% endcomment %}
 {% endblock %}
 
 {% block footer %}
