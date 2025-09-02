@@ -44,7 +44,7 @@ def form(request):
         numb = request.POST.get('num')
         email = request.POST.get('email')
         msg = request.POST.get('message')
-        date = request.POST.get('date')
+
         
         #Validations for forms
         errors = []
@@ -73,7 +73,6 @@ def form(request):
             number = numb,
             email = email,
             message = msg,
-            date = date,
         )
         return redirect('success')
         
