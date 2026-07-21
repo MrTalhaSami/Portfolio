@@ -6,6 +6,10 @@
     background-color: #02eefe;
 }
 
+.banner-img{
+    filter: drop-shadow(10px,10px, 20px yellow);
+}
+
 nav{
     box-shadow: 15px 5px 20px rgb(45, 45, 45);
 }
