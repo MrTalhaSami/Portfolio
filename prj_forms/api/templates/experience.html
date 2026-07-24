@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}| Experience{% endblock %}
+
+{% block body %}
+  <header class="page-header">
+    <div class="container">
+      <span class="eyebrow">Career Timeline</span>
+      <h1 class="fw-bold">Experience</h1>
+      <p class="portfolio-desc" style="max-width: 640px;">2+ years across manual and automated QA — end-to-end testing, API validation, and automation frameworks across web, Android, and iOS.</p>
+    </div>
+  </header>
+
+  <section class="mb-4 fade-up">
+    <div class="container my-3">
+      <div class="timeline">
+        <div class="timeline-item d-flex">
+          <div class="timeline-rail">
+            <span class="timeline-dot"></span>
+          </div>
+          <div class="card-dark timeline-card p-4 flex-grow-1">
+            <div class="d-flex justify-content-between flex-wrap">
+              <h5 class="project-title-italic mb-2">Spiral Lab — SQA Engineer (On-Site)</h5>
+              <span class="font-mono text-scheme timeline-date">Dec 2025 – Present</span>
+            </div>
+            <p class="mb-0">● Performed end-to-end (E2E) testing across web, Android, and iOS, covering critical user journeys through manual, API (Postman), regression, smoke, and sanity testing. ● Automated critical E2E regression suites using Playwright and TypeScript, cutting regression execution cycles by 40% and accelerating continuous integration deployment speeds. ● Designed and executed 500+ comprehensive test cases spanning Web, Android, iOS, and API layers; increased total test coverage across core functionality and reduced post-release defects. ● Served as the primary client-facing QA liaison, translating complex business requirement analysis into structured technical milestones and authoring the official Application Implementation Document.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item d-flex">
+          <div class="timeline-rail">
+            <span class="timeline-dot"></span>
+          </div>
+          <div class="card-dark timeline-card p-4 flex-grow-1">
+            <div class="d-flex justify-content-between flex-wrap">
+              <h5 class="project-title-italic mb-2">EventO — Test Automation Engineer (Contract)</h5>
+              <span class="font-mono text-scheme timeline-date">Dec 2025 – Present</span>
+            </div>
+            <p class="mb-0">● Built and maintained a Playwright automation framework to cover critical end-to-end test scenarios, reducing manual regression effort. ● Integrated the automation suite into CI/CD pipelines using GitHub Actions and Jenkins, triggering regression runs automatically on every build. ● Configured Allure reporting for clear, shareable test result dashboards, improving visibility into test coverage and failure trends across the team.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item d-flex">
+          <div class="timeline-rail">
+            <span class="timeline-dot"></span>
+          </div>
+          <div class="card-dark timeline-card p-4 flex-grow-1">
+            <div class="d-flex justify-content-between flex-wrap">
+              <h5 class="project-title-italic mb-2">Spiral Lab — Associate SQA Engineer (On-Site)</h5>
+              <span class="font-mono text-scheme timeline-date">Oct 2025 – Dec 2025</span>
+            </div>
+            <p class="mb-0">● Led cross-functional teams of developers, QA engineers, and designers to plan, execute, and deliver software projects on time. ● Performed API testing using Postman, validating secure and accurate data flow in modules. ● Managed client interactions, gathered requirements, monitored project milestones.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item d-flex">
+          <div class="timeline-rail">
+            <span class="timeline-dot"></span>
+          </div>
+          <div class="card-dark timeline-card p-4 flex-grow-1">
+            <div class="d-flex justify-content-between flex-wrap">
+              <h5 class="project-title-italic mb-2">The Sparks Foundation — SQA Engineer Intern (Remote)</h5>
+              <span class="font-mono text-scheme timeline-date">Jan 2025 – Mar 2025</span>
+            </div>
+            <p class="mb-0">● Assisted the QA team in executing manual test cases, identifying and reporting bugs to ensure the stability and functionality of web applications. ● Learned and applied core QA practices including test case design, bug tracking, and regression testing while collaborating with developers to improve product quality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+{% block footer %}
+  <footer>
+    <p>Copyright @talha</p>
+  </footer>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{% static 'api/js/skills.js' %}"></script>
+{% endblock %}

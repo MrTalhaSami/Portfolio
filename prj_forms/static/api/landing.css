@@ -19,13 +19,6 @@ img{
     color: #2e0a7a;
  }
 
-.card{
-   background-color: rgba(0, 0, 0, 0.336);
-   border: 1px solid #02eefe;
-   color: rgb(172, 191, 192);
-}
-
- 
 
  .img-container{
    background-image: url('/slider_img.png');
