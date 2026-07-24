@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}| Testimonials{% endblock %}
+
+{% block body %}
+  <header class="page-header">
+    <div class="container">
+      <span class="eyebrow">Testimonials</span>
+      <h1 class="fw-bold">What teams say</h1>
+    </div>
+  </header>
+
+  <section class="mb-4 fade-up">
+    <div class="container my-3">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card card-dark h-100 p-4">
+            <p class="fst-italic">"Placeholder quote — swap this in for real client or teammate feedback about working with Talha."</p>
+            <p class="mb-0 mt-3"><strong>Client Name</strong></p>
+            <p class="font-mono text-scheme mb-0" style="font-size:0.85rem;">Role, Company</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-dark h-100 p-4">
+            <p class="fst-italic">"Placeholder quote — swap this in for real client or teammate feedback about working with Talha."</p>
+            <p class="mb-0 mt-3"><strong>Client Name</strong></p>
+            <p class="font-mono text-scheme mb-0" style="font-size:0.85rem;">Role, Company</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-dark h-100 p-4">
+            <p class="fst-italic">"Placeholder quote — swap this in for real client or teammate feedback about working with Talha."</p>
+            <p class="mb-0 mt-3"><strong>Client Name</strong></p>
+            <p class="font-mono text-scheme mb-0" style="font-size:0.85rem;">Role, Company</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
+
+{% block scripts %}
+  <script src="{% static 'api/js/skills.js' %}"></script>
+{% endblock %}

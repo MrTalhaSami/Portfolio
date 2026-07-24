@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}| Blog{% endblock %}
+
+{% block body %}
+  <header class="page-header">
+    <div class="container">
+      <span class="eyebrow">Blog</span>
+      <h1 class="fw-bold">Notes on QA &amp; Automation</h1>
+    </div>
+  </header>
+
+  <section class="mb-4 fade-up">
+    <div class="container my-3">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card card-dark h-100">
+            <div class="card-body">
+              <p class="font-mono text-scheme mb-2" style="font-size:0.8rem;">Coming soon</p>
+              <h5 class="card-title">Placeholder Post Title</h5>
+              <p class="mt-2">Short excerpt goes here once this post is written — a preview of what the article covers.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-dark h-100">
+            <div class="card-body">
+              <p class="font-mono text-scheme mb-2" style="font-size:0.8rem;">Coming soon</p>
+              <h5 class="card-title">Placeholder Post Title</h5>
+              <p class="mt-2">Short excerpt goes here once this post is written — a preview of what the article covers.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-dark h-100">
+            <div class="card-body">
+              <p class="font-mono text-scheme mb-2" style="font-size:0.8rem;">Coming soon</p>
+              <h5 class="card-title">Placeholder Post Title</h5>
+              <p class="mt-2">Short excerpt goes here once this post is written — a preview of what the article covers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
+
+{% block footer %}
+  <footer>
+    <p>Copyright @talha</p>
+  </footer>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{% static 'api/js/skills.js' %}"></script>
+{% endblock %}

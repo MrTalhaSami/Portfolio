@@ -12,9 +12,20 @@ def response(request):
     return HttpResponse("Server is working...")
 
 def landing(request):
-    template = loader.get_template('landing.html')
-    return HttpResponse(template.render())
-    
+    return render(request, 'landing.html')
+
+def projects(request):
+    return render(request, 'projects.html')
+
+def experience(request):
+    return render(request, 'experience.html')
+
+def testimonials(request):
+    return render(request, 'testimonials.html')
+
+def blog(request):
+    return render(request, 'blog.html')
+
 def members(request):
     template = loader.get_template('members.html')
     data = dataClass.objects.all().values()
@@ -32,50 +43,39 @@ def details(request, id):
   return HttpResponse(template.render(context, request))
 
 def about(request):
-    template = loader.get_template('about.html')
-    return HttpResponse(template.render())
+    return render(request, 'about.html')
 
 #form Logic:
 
 def form(request):
     if request.method == 'POST':
-        fisrt = request.POST.get('fName')
-        last = request.POST.get('lName')
-        numb = request.POST.get('num')
-        email = request.POST.get('email')
-        msg = request.POST.get('message')
+        name = request.POST.get('name', '').strip()
+        email = request.POST.get('email', '').strip()
+        msg = request.POST.get('message', '').strip()
 
-        
-        #Validations for forms
+        #Validations for form
         errors = []
-        
-        #for Number input
-        if not re.fullmatch(r"\d{11}", numb):
-            errors.append("number must be 11 digits")
-        
-        #for email input
+
+        if not re.fullmatch(r"[A-Za-z ]+", name):
+            errors.append("Name should only contain letters and spaces.")
+
         if not re.fullmatch(r"[^@]+@[^@]+\.[^@]+", email):
             errors.append("Invalid email format.")
-            
-        #for first and last name
-        if not re.fullmatch(r"[A-Za-z]+", fisrt):
-            errors.append("First name should only contain letters.")
-        if not re.fullmatch(r"[A-Za-z]+", last):
-            errors.append("Last name should only contain letters.")
-            
+
+        if not msg:
+            errors.append("Message cannot be empty.")
+
         if errors:
             return render(request, 'form.html', {'errors': errors})
-        
-        
+
+
         dataClass.objects.create(
-            firstName = fisrt,
-            lastName = last,
-            number = numb,
+            firstName = name,
             email = email,
             message = msg,
         )
         return redirect('success')
-        
+
     return render(request,'form.html')
 
 def success(request):

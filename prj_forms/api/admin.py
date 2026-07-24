@@ -6,4 +6,4 @@ from .models import dataClass
 
 @admin.register(dataClass)
 class dataClassAdmin(admin.ModelAdmin):
-    list_display = ('firstName', 'date')
+    list_display = ('firstName', 'email', 'date')

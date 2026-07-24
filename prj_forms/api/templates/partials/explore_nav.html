@@ -1,0 +1,45 @@
+
+{% comment %}
+  Reusable "More to see" cross-page navigation.
+  Include with: {% include 'partials/explore_nav.html' with current='projects' %}
+  `current` should match a url_name below; leave blank/omit if none should be highlighted.
+{% endcomment %}
+<div class="container"><hr class="section-divider my-5" /></div>
+<section class="mb-4 fade-up">
+  <div class="container my-5">
+    <span class="eyebrow d-block">Explore</span>
+    <h2 class="fw-bold mb-4">More to see</h2>
+    <div class="row g-3">
+      <div class="col-6 col-md-4 col-lg">
+        <a href="{% url 'projects' %}" class="explore-card {% if current == 'projects' %}active{% endif %}">
+          <h5 class="mb-1">Projects</h5>
+          <p class="mb-0">Selected work &amp; case studies</p>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg">
+        <a href="{% url 'experience' %}" class="explore-card {% if current == 'experience' %}active{% endif %}">
+          <h5 class="mb-1">Experience</h5>
+          <p class="mb-0">Career timeline</p>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg">
+        <a href="{% url 'testimonials' %}" class="explore-card {% if current == 'testimonials' %}active{% endif %}">
+          <h5 class="mb-1">Testimonials</h5>
+          <p class="mb-0">What teams say</p>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg">
+        <a href="{% url 'blog' %}" class="explore-card {% if current == 'blog' %}active{% endif %}">
+          <h5 class="mb-1">Blog</h5>
+          <p class="mb-0">Notes on QA &amp; automation</p>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg">
+        <a href="{% url 'members' %}" class="explore-card {% if current == 'members' %}active{% endif %}">
+          <h5 class="mb-1">Members</h5>
+          <p class="mb-0">Team &amp; collaborators</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
